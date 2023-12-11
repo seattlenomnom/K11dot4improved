@@ -15,8 +15,8 @@
 
 
 /* includes */
-
-
+#include <stdlib.h>
+#include <stdio.h>
 
 
 
@@ -50,6 +50,7 @@ int main(int argc, char *argv[]){
 
 
     int errorCode;
+    unsigned long testvar;
 
 
 
@@ -57,7 +58,9 @@ int main(int argc, char *argv[]){
 
 
     errorCode = 0;
+    testvar = 0;
 
+    printf("unsigned longs are %i bytes long\n", sizeof(testvar));
 
 
 
@@ -72,3 +75,21 @@ int main(int argc, char *argv[]){
 
     return(errorCode);
 }
+
+
+/* function definitions */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
