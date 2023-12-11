@@ -9,3 +9,5 @@ of bits to be rotated left or right.
 ## Notes:
 12/11/2023
     Set up project on local host and github.com.
+    Create branch inputtest and get argv[1] and argv[2] into program
+variables.
