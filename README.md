@@ -11,3 +11,25 @@ of bits to be rotated left or right.
     Set up project on local host and github.com.
     Create branch inputtest and get argv[1] and argv[2] into program
 variables.
+
+03/14/2024
+On branch Inputtest. Trying to get the command line parameters(the character 
+array expression of a binary number expressed in hex, and the number of 
+positions to rotate it, char array of hex numbers) into program variables so
+that I don't destroy the command line arguments. I will use numbers to limit
+how far through the command line arrays that I go(some rudimentary security).
+
+Found several bugs: a typo in the makefile, updated program constants that 
+turned out to be wrong. Found problems(a success), added functionality
+(a success), got the program(this far) to work(another success). Got to 
+practice usinng GDB(a success), used it to find the bugs(a success).
+
+Next: get back on track in developing the program.
+
+03/18/2024
+What are the lengths of argv[1] and argv[2]?
+I have decided to refocus this program and make it a shift program. Shift an
+eight bit number, arg1, left or right by a an int or smaller left or right 
+depending on the sign. 
+
+Make the design and implementation stuped simple, as much as possible.

@@ -2,7 +2,7 @@
 #
 #
 CC=gcc
-CFLAgS=-Wall -g
+CFLAGS=-Wall -g
 
 all: k11dot4improved
 
