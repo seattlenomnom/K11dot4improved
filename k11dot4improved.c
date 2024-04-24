@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 
 
@@ -46,7 +47,7 @@
 
 /* function declarations */
 
-
+bool arg1Valid(char *s1);
 
 
 
@@ -60,13 +61,6 @@ int main(int argc, char *argv[]){
 
 
 
-
-/* use memset here? */
-
-    memset(s1, '\0', array1Len + 1);
-    memset(s2, '\0', array2Len + 1);
-
-
 /* correct number of args? */
     if(argc != kcorrectNumArgs){
         printf("useage: progname arg1 arg2\n");
@@ -76,6 +70,19 @@ int main(int argc, char *argv[]){
     }
 
 
+/* use memset here? */
+
+    memset(s1, '\0', array1Len + 1);
+    memset(s2, '\0', array2Len + 1);
+
+
+
+
+
+
+
+
+
 /* copy argv[1] into s1 */
     strncpy(s1, argv[1], array1Len);
 
@@ -83,7 +90,28 @@ int main(int argc, char *argv[]){
     strncpy(s2, argv[2], array2Len);
 
 
+/* What do I have so far? I have the command line args in program strings.
+ * Validate the values of arg1 and arg2.
+ *
+ * Arg1
+ * The number to be shifted (later rotated) by arg2 positions left or right.
+ * The Number: 2 bytes expressed as hexadecimal. s1 contains the char version
+ * as a char string. Validate s1; does it contain hexadecimal chars?
+*/
 
+/* arg1Valid
+ * input: s1 a string of character, the correct length of the string.
+ *
+ * return: boolean true or false.
+ *
+ * is the string the correct length?
+ * does it contain a leading 0x or 0X?
+ * are all the characters hexadecimal numbers?
+*/
+    if(arg1Valid(s1) == false) {
+        printf("error: arg1 invalid\n");
+        exit(0);
+    }
 
 
 
@@ -95,7 +123,13 @@ int main(int argc, char *argv[]){
 
 /* function definitions */
 
+bool arg1Valid(char *s1) {
 
+    bool arrayValid = false;
+
+
+    return(arrayValid);
+}
 
 
 
