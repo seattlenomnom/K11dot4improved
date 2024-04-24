@@ -33,3 +33,17 @@ eight bit number, arg1, left or right by a an int or smaller left or right
 depending on the sign. 
 
 Make the design and implementation stuped simple, as much as possible.
+
+04/17/2024
+Memset to initialize program strings to '\0'. strncpy to copy command line
+arg strings to program strings. What next? As I remember, I wanted to scale
+back the design. Make it a shift program like in the book, then morph it into
+what ever else I want. Shift is a C operator. Is there anything more to do 
+with input validation? Is arg1 a valid hex character? Is arg2 correct? Do I 
+need to turn the char strings into ints? A thing to do: study the capability
+of the C language in the area of characters and character strings -- I think
+that it is quite amazing.
+
+Strip leading 0x or 0X. Does the remaining string contain valid hex chars?
+
+Make arg2 larger, to contain a possible minus sign. - indicates shift right.
