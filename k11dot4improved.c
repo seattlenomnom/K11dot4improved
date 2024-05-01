@@ -24,6 +24,8 @@
  * print out number.
  *
  *
+ * 04/30/2024
+ * Can validate first number
  *
 */
 
@@ -33,7 +35,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-
+#include <ctype.h>
 
 
 
@@ -48,6 +50,7 @@
 /* function declarations */
 
 bool arg1Valid(char *s1);
+bool allHex(char *s1);
 
 
 
@@ -57,7 +60,6 @@ int main(int argc, char *argv[]){
     char s1[knum1ArraySize + 1], s2[knum2ArraySize + 1];
     size_t array2Len = knum2ArraySize;
     size_t array1Len = knum1ArraySize;
-    size_t arraySize = 0;
 
 
 
@@ -127,10 +129,37 @@ bool arg1Valid(char *s1) {
 
     bool arrayValid = false;
 
+    if((strlen(s1) == knum1ArraySize) && (allHex(s1) == true))
+        arrayValid = true;
+
 
     return(arrayValid);
 }
 
+
+bool allHex(char *s1) {
+
+    bool returnValue;
+    int index;
+
+
+
+    returnValue = false;
+    index = 0;
+
+    index = 0;
+    while(*(s1 + index) != '\0'){
+        if((isxdigit(*(s1 + index)))){
+            ++index;
+            returnValue = true;
+        }else{
+            returnValue = false;
+            break;}
+    }
+
+    return(returnValue);
+
+}
 
 
 

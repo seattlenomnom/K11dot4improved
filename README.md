@@ -47,3 +47,6 @@ that it is quite amazing.
 Strip leading 0x or 0X. Does the remaining string contain valid hex chars?
 
 Make arg2 larger, to contain a possible minus sign. - indicates shift right.
+
+04/30/2024
+Can validate first number. 
