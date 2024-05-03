@@ -50,3 +50,32 @@ Make arg2 larger, to contain a possible minus sign. - indicates shift right.
 
 04/30/2024
 Can validate first number. 
+
+05/02/2024
+found bugs; reorganized program logic. Saw analog betwen procedural expression
+of a program and model, controller elements from MVC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
