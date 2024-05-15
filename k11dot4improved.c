@@ -49,13 +49,16 @@
 
 /* function declarations */
 
-bool arg1Valid(char *s1);
-bool allHex(char *s1);
-bool arg2Valid(char *s2);
-bool allDec(char *s2);
 bool validateArgs(char *s1, char *s2);
-int arg1_to_num(char *s1);
-int arg2_to_num(char *s2);
+bool arg1Valid(char *s1);
+bool arg2Valid(char *s2);
+bool allHex(char *s1);
+bool allDec(char *s2);
+
+
+
+unsigned long int arg1_to_num(char *s1);
+unsigned long int arg2_to_num(char *s2);
 
 
 
@@ -73,6 +76,8 @@ int main(int argc, char *argv[]){
 
 
 /* use memset here? */
+
+    memset(s1, '\0', array1Len + 1);
 
     memset(s2, '\0', array2Len + 1);
 
@@ -237,18 +242,8 @@ bool validateArgs(char *s1, char *s2) {
         exit(0);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    if(arg1Valid(s1) && arg2Valid(s2))
+        returnValue = true;
 
 
     return(returnValue);
@@ -258,30 +253,35 @@ bool validateArgs(char *s1, char *s2) {
 
 
 /* convert a hex string to an int */
-int arg1_to_num(char *s1){
+unsigned long  int arg1_to_num(char *s1){
+    unsigned long int n;
+    char *endptr;
 
+    n = 0;
 
+    n = strtoul(s1, &endptr, 16);
 
+    printf("hex string converts to %lu\n", n);
 
-
-
-
+    return(n);
 }
 
 
 
 
 /* turn a dec sting to an int */
-int arg2_to_num(char *s2){
+unsigned long int arg2_to_num(char *s2){
+
+    unsigned long int n;
+
+    n = 4;
 
 
 
 
 
 
-
-
-
+    return(n);
 
 }
 

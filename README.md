@@ -55,6 +55,12 @@ Can validate first number.
 found bugs; reorganized program logic. Saw analog betwen procedural expression
 of a program and model, controller elements from MVC.
 
+05/14/2024
+Next: arg2_to_num (?) 
+got most everything else working. Program organization is a little weird.
+Practice use C std library functions. Small programs that let you get familiar
+with them.
+
 
 
 
