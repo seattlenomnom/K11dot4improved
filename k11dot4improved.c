@@ -273,11 +273,9 @@ unsigned long  int arg1_to_num(char *s1){
 unsigned long int arg2_to_num(char *s2){
 
     unsigned long int n;
+    char *ptr;
 
-    n = 4;
-
-
-
+    n = strtoul(s2, &ptr, 10);
 
 
 

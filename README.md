@@ -61,7 +61,13 @@ got most everything else working. Program organization is a little weird.
 Practice use C std library functions. Small programs that let you get familiar
 with them.
 
+06/06/2024
+Last thing, then I'll move on. Turn 2nd parameter into an int and incorpor-
+ate it into the shift calculation. Next problems should be bare, and use
+gdb to see the effects. The way I handled this problem taught me alot. Come
+back and do similar problem. Study the C standard library.
 
+Finsied! Good job, Mark.
 
 
 
